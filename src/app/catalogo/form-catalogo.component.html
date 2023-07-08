@@ -1,0 +1,16 @@
+<br>
+<div class="container">
+    <div class="card-body">
+        <h5 class="card-title">{{titulo}}</h5>
+        <form>
+            <div class="form-group row">
+                <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="cata.nombre" >
+                </div>
+            </div>
+            <button class="btn btn-primary" role="button" (click)='create()'>Guardar</button>
+            <button class="btn btn-primary" role="button" (click)='update()'>actua</button>
+        </form>
+    </div>
+</div>

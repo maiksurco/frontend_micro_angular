@@ -1,0 +1,23 @@
+<div class="container">
+{{titulo}}
+<br>
+<button type="button" class="btn btn-outline-success" [routerLink]="['/catalogo/form']">Nueva Marca</button>
+<br>
+<table class="table table-sm table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">MOMBRE</th>
+        <th scope="col">EDITAR</th>
+
+      </tr>
+    </thead>
+    <tbody *ngFor="let catalogo of catalogos">
+      <tr>
+        <th scope="row">{{catalogo.id}}</th>
+        <td>{{catalogo.nombre}}</td>
+        <td> <button type="button" name="button" class="btn btn-primary" [routerLink]="['/catalogo/form',catalogo.id]">Editar</button> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

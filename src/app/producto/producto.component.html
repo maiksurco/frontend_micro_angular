@@ -1,0 +1,24 @@
+<div class="container">
+{{Producto}}
+<br>
+<table class="table table-sm table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">MOMBRE</th>
+        <th scope="col">STOCK</th>
+        <th scope="col">PRECIO</th>
+        <th scope="col">MARCA</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let producto of productos">
+      <tr>
+        <th scope="row">{{producto.id}}</th>
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.stock}}</td>
+        <td>{{producto.precio}}</td>
+        <td>{{producto.catalogoId}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
