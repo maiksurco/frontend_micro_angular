@@ -9,8 +9,11 @@
                     <input type="text" class="form-control" name="nombre" [(ngModel)]="cata.nombre" >
                 </div>
             </div>
-            <button class="btn btn-primary" role="button" (click)='create()'>Guardar</button>
-            <button class="btn btn-primary" role="button" (click)='update()'>actua</button>
+            <button class="btn btn-primary" role="button" (click)='create()' *ngIf="!cata.id else elseBlock">Guardar</button>
+            
+            <ng-template #elseBlock>
+                <button class="btn btn-primary" role="button" (click)='update()'>Actualizar</button>
+            </ng-template>
         </form>
     </div>
 </div>

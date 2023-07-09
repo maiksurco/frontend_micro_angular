@@ -8,7 +8,7 @@
       <tr>
         <th scope="col">ID</th>
         <th scope="col">MOMBRE</th>
-        <th scope="col">EDITAR</th>
+        <th scope="col">OPCIONES</th>
 
       </tr>
     </thead>
@@ -16,7 +16,10 @@
       <tr>
         <th scope="row">{{catalogo.id}}</th>
         <td>{{catalogo.nombre}}</td>
-        <td> <button type="button" name="button" class="btn btn-primary" [routerLink]="['/catalogo/form',catalogo.id]">Editar</button> </td>
+
+        <td>
+          <button type="button" name="button" class="btn btn-primary" [routerLink]="['/catalogo/form',catalogo.id]">Editar</button> 
+          <button class="btn btn-danger" (click)="delete(catalogo)"> Eliminar</button>
       </tr>
     </tbody>
   </table>

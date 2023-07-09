@@ -19,4 +19,18 @@ export class CatalogoComponent implements OnInit {
         c =>this.catalogos=c 
       );
   }
+  delete(catalogo:Catalogo):void{
+    console.log("hola");
+    if (catalogo.id) {
+      this.catalogoService.delete(catalogo.id).subscribe(
+        res=>{
+          this.catalogoService.getAll().subscribe(
+            response=>this.catalogos=response
+          );  
+        }
+      );
+    }
+  }
+
+
 }
