@@ -22,11 +22,12 @@ import { FormPedidoComponent } from './pedido/form-pedido.component';
 import { FormCarritoComponent } from './carrito/form-carrito.component';
 
 const routes:Routes=[
-  {path:'',redirectTo:'/carrito',pathMatch:'full'},
-  {path:'carrito',component:CarritoComponent},
-  {path:'carrito/form',component:FormCarritoComponent},
-  {path:'carrito/form/:id',component:FormCarritoComponent},
+  {path:'',redirectTo:'/pedido',pathMatch:'full'},
+  {path:'pedido',component:PedidoComponent},
+  {path:'pedido/form',component:FormPedidoComponent},
+  {path:'pedido/form/:id',component:FormPedidoComponent},
 ]
+
 
 
 @NgModule({

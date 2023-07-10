@@ -6,4 +6,4 @@ export class Carrito {
     nombre:string | undefined;
     precio:number | undefined;
 }
-//maik
+
