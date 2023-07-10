@@ -1,8 +1,9 @@
 export class Carrito {
     id:number | undefined;
-    nombre:string | undefined;
+    cantidad:number | undefined ;
     descripcion:string | undefined;
     imagen:string | undefined;
+    nombre:string | undefined;
     precio:number | undefined;
-    cantidad:number | undefined;
 }
+//maik

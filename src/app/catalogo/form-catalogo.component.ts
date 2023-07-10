@@ -3,9 +3,6 @@ import { CatalogoService } from './catalogo.service';
 import { Catalogo } from './catalogo';
 import { Router,ActivatedRoute } from '@angular/router';
 
-
-
-
 @Component({
   selector: 'app-form-catalogo',
   templateUrl: './form-catalogo.component.html',

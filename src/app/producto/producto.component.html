@@ -1,6 +1,8 @@
 <div class="container">
 {{Producto}}
 <br>
+<button type="button" class="btn btn-outline-success" [routerLink]="['/producto/form']">Nueva persona</button>
+<br>
 <table class="table table-sm table-dark">
     <thead>
       <tr>
@@ -18,7 +20,11 @@
         <td>{{producto.stock}}</td>
         <td>{{producto.precio}}</td>
         <td>{{producto.catalogoId}}</td>
+        <td>
+          <button type="button" name="button" class="btn btn-primary" [routerLink]="['/producto/form',producto.id]">Editar</button> 
+          <button class="btn btn-danger" (click)="delete(producto)"> Eliminar</button>
+        </td>
       </tr>
     </tbody>
-  </table>
+</table>
 </div>

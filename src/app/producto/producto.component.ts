@@ -19,6 +19,18 @@ export class ProductoComponent implements OnInit{
     this.productoService.getAll().subscribe(
       p =>this.productos= p
     );
-}
+  }
+  delete(producto:Producto):void{
+    console.log("hola");
+    if (producto.id) {
+      this.productoService.delete(producto.id).subscribe(
+        res=>{
+          this.productoService.getAll().subscribe(
+            response=>this.productos=response
+          );  
+        }
+      );
+    }
+  }
 
 }

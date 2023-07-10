@@ -1,1 +1,31 @@
-<p>form-usuario works!</p>
+<br>
+<div class="container">
+    <div class="card-body">
+        <h5 class="card-title">{{titulo}}</h5>
+        <form>
+            <div class="form-group row">
+                <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="usu.nombre" >
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="nombre" class="col-form-label col-sm-2">apellido</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="usu.apellido" >
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="nombre" class="col-form-label col-sm-2">email</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="usu.email" >
+                </div>
+            </div>
+            <button class="btn btn-primary" role="button" (click)='create()' *ngIf="!usu.id else elseBlock">Guardar</button>
+            
+            <ng-template #elseBlock>
+                <button class="btn btn-primary" role="button" (click)='update()'>Actualizar</button>
+            </ng-template>
+        </form>
+    </div>
+</div>

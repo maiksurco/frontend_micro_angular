@@ -1,1 +1,31 @@
-<p>usuario works!</p>
+<div class="container">
+    {{titulo}}
+    <br>
+    <button type="button" class="btn btn-outline-success" [routerLink]="['/catalogo/form']">Nueva Marca</button>
+    <br>
+    <table class="table table-sm table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">MOMBRE</th>
+            <th scope="col">APELLIDO</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">OPCIONES</th>
+    
+          </tr>
+        </thead>
+        <tbody *ngFor="let usuario of usuarios">
+          <tr>
+            <th scope="row">{{usuario.id}}</th>
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.apellido}}</td>
+            <td>{{usuario.email}}</td>
+    
+            <td>
+              <button type="button" name="button" class="btn btn-primary" [routerLink]="['/usuario/form',usuario.id]">Editar</button> 
+              <button class="btn btn-danger" (click)="delete(usuario)"> Eliminar</button>
+            </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>

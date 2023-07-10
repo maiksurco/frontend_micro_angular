@@ -1,1 +1,34 @@
-<p>pedido works!</p>
+<div class="container">
+    {{titulo}}
+    <br>
+    <button type="button" class="btn btn-outline-success" [routerLink]="['/pedido/form']">Nueva pedido</button>
+    <br>
+    <table class="table table-sm table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">USER</th>
+            <th scope="col">FECHA</th>
+            <th scope="col">ESTADO</th>
+            <th scope="col">TOTAL</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">OPCIONES</th>
+    
+          </tr>
+        </thead>
+        <tbody *ngFor="let pedido of pedidos">
+          <tr>
+            <th scope="row">{{pedido.id}}</th>
+            <td>{{pedido.usua_id}}</td>
+            <td>{{pedido.estado}}</td>
+            <td>{{pedido.fecha}}</td>
+            <td>{{pedido.total}}</td>
+            <td>{{pedido.email}}</td>
+            <td>
+              <button type="button" name="button" class="btn btn-primary" [routerLink]="['/pedido/form',pedido.id]">Editar</button> 
+              <button class="btn btn-danger" (click)="delete(pedido)"> Eliminar</button>
+            </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
